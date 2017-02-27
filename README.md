@@ -1,3 +1,5 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/LostInBrittany/granite-ajax-saver)
+
 # granite-ajax-saver
 
 > A lightweight element to save the response from an AJAX call into a file on the local filesystem
