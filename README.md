@@ -17,6 +17,14 @@
 ```
 <custom-element-demo>
   <template>
+    <style>
+      .clickHere {
+        border-radius: 2px;
+        padding: 10px;
+        background-color: #4285f4;
+        color: white; 
+      }
+    </style>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="granite-ajax-saver.html">
     <next-code-block></next-code-block>
@@ -27,7 +35,7 @@
 ```html
 <granite-ajax-saver 
     url="./demo/anExampleFileToLoad.txt">
-<div class="clickHere">Click here to save the content of `./demo/anExampleFileToLoad.txt` to a file</div>
+    <div class="clickHere">Click here to save the content of `./demo/anExampleFileToLoad.txt` to a file</div>
 </granite-ajax-saver>
 ```
 

@@ -68,7 +68,9 @@ Typical usage:
         on-error="_handleResponse"
       ></iron-ajax>
 
-      <slot on-tap="_onTap"></slot>
+      <div on-tap="_onTap">
+        <slot></slot>
+      </div>
       <a id="hiddenSaver" href$="[[_file]]" download="{{_filename}}" hidden></a>
     </template>
 
