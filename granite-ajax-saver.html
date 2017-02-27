@@ -23,6 +23,15 @@ Typical usage:
 <div class="clickHere">Click here to save the content of `./demo/anExampleFileToLoad.txt` to a file</div>
 </granite-ajax-saver>
 ```
+
+With `auto` set to `true`, the element performs a request whenever
+its `url`, `params` or `body` properties are changed. Automatically generated
+requests will be debounced in the case that multiple attributes are changed
+sequentially.
+Note: The `params` attribute must be double quoted JSON.
+You can trigger a request explicitly by calling `generateRequest` on the
+element.
+
     
 @element granite-ajax-saver
 @blurb A lightweight element to save content to a file on the local filesystem
@@ -333,7 +342,7 @@ Typical usage:
 
         _onTap: function(evt) {
           evt.stopPropagation();
-          this.$.ironAjax.generateRequest();
+          this.generateRequest();
         },
 
         _handleResponse: function(evt, ironRequest) {
@@ -363,6 +372,17 @@ Typical usage:
           console.warn("[granite-ajax-saver] _onError", error);
         },
 
+        // *****************************************************************************************
+        // Instance methods
+        // *****************************************************************************************
+        /**
+        * Performs an AJAX request to the specified URL.
+        *
+        * @return {!IronRequestElement}
+        */
+        generateRequest: function() {
+          return this.$.ironAjax.generateRequest();
+        },
 
       });
     </script>
