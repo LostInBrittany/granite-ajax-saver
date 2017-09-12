@@ -3,8 +3,8 @@
 # granite-ajax-saver
 
 > A lightweight element to save the response from an AJAX call into a file on the local filesystem
-> 
-> Polymer 1.8 ready
+>
+> Hybrid Polymer element, 1.x-2.x ready
 
 ## Doc & demo
 
